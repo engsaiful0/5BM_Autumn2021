@@ -1,23 +1,62 @@
 <html>
 <head>
     <title>5BM Autumn 2022</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
-<style>
-    .button-class {
-        font-size: 30px;
-    }
-
-    .table-class {
-        width: 100%;
-        margin-top: 10px;
-
-    }
-
-    #content {
-        margin-top: 5px;
-    }
-</style>
 <body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div style="background-color: red" class="col-md-4">
+            <p>First</p>
+        </div>
+        <div  class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <h3>Registration Form</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-hover table-striped">
+                        <tr>
+                            <td>Student Name</td>
+                            <td>
+                                <input class="form-control" type="text" name="studentName" id="studentName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Father Name</td>
+                            <td>
+                                <input class="form-control" type="text" name="fatherName" id="fatherName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Student ID</td>
+                            <td>
+                                <input class="form-control" type="text" name="studentId" id="studentId">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input  class="btn btn-success " value="Submit" type="submit">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+        <div style="background-color: yellow" class="col-md-4">
+            <p>Third</p>
+        </div>
+    </div>
+
+</div>
+
+
 <p>Hello world</p>
 <img style="width: 100%;height: 300px; " src="images/ark.png">
 <table class="table-class" cellspacing="50" border="1" style="border-collapse: collapse">
@@ -40,14 +79,14 @@
         <td colspan="2">102</td>
     </tr>
 </table>
-<div id="content" style="background-color:red;width: 50%;float: left ">
+<div class="left-content" id="content" style="background-color:red;float: left ">
     <p style="text-align: justify;padding: 5px;color: white">A CRT (cathode-ray tube) monitor is an analog display
         device that creates a visible image on the screen by directing three electron beams over millions of phosphor
         dots to make them light up. In a color monitor, the screen is composed of numerous stripes of alternating red,
         green, and blue phosphor dots, which get activated by the electrons and combine to make countless different
         hues.</p>
 </div>
-<div id="" class="form" style="background-color: rosybrown;width: 50%;float: left">
+<div id="" class="form right-content" style="background-color: rosybrown;float: left">
     <input placeholder="Enter student name" type="text" name="studentName"><br>
     <input placeholder="Enter Student ID" type="text" name="studentId"><br>
     <select name="department">
