@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function displayFunction()
+    {
+        document.getElementById('resultShowRow').style.display="none";
+    }
+    function addition(firstNumber=0) {
+        //alert("I am here");
+        //var firstNumber = document.getElementById('firstNumber').value;
+        var secondNumber = document.getElementById('secondNumber').value;
+        var addition = (Number(firstNumber) + Number(secondNumber)).toFixed(3);
+        document.getElementById('result').value = addition;
+        document.getElementById('resultShow').innerText = addition;
+        let total=0;
+        for (var index=0;index<=100;index++)
+        {
+            total+=index;
+        }
+        //confirm("Do you want to do this?");
+        //document.write(total);
+        //alert('addition='+addition);
+        //console.log('firstNumber='+firstNumber);
+
+    }
+</script>
+<table>
+    <tr>
+        <td>First Number</td>
+        <td><input type="number" oninput="addition(this.value),displayFunction()" id="firstNumber" name="firstNumber"></td>
+    </tr>
+    <tr>
+        <td>Second Number</td>
+        <td><input type="number" oninput="addition()" id="secondNumber" name="secondNumber"></td>
+    </tr>
+    <tr>
+        <td>Third Number</td>
+        <td><input type="number" onblur="addition(this.value)" id="thirdNumber" name="thirdNumber"></td>
+    </tr>
+    <tr>
+        <td>Result</td>
+        <td><input type="number" id="result" name="result"></td>
+    </tr>
+    <tr>
+        <td>Department</td>
+        <td>
+            <select onchange="addition(this.value)" id="department" name="department">
+                <option value="1">CSE</option>
+                <option value="2">EEE</option>
+                <option value="3">ME</option>
+            </select>
+        </td>
+    </tr>
+    <tr style="display: block" id="resultShowRow">
+        <td>Result Show</td>
+        <td id="resultShow">
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button onclick="addition()">Add</button>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
